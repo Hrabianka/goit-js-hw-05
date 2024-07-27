@@ -1,13 +1,6 @@
 'use strict';
-const getTotalBalanceByGender = (users, gender) => {
-  let ballanceAll = 0;
-  const ballanceTab = users.map(user => {
-    if (user.gender == gender) {
-      ballanceAll += user.balance;
-    }
-  });
-  return ballanceAll;
-};
+const getTotalBalanceByGender = (users, gender) =>
+  users.filter(user => user.gender === gender).reduce((total, user) => total + user.balance, 0);
 
 const allUsers2 = [
   {
