@@ -1,6 +1,6 @@
 'use strict';
 const getUserNames = users => {
-  const userName = users.map((user, index) => user['name']);
+  const userName = users.map((user, index) => user.name);
   return userName;
 };
 

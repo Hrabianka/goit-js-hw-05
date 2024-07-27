@@ -1,5 +1,6 @@
 'use strict';
 const getUsersWithFriend = (users, friendName) => {
+  const newUsers = users.filter(user => user.friends.includes(friendName));
   // przyjmuje dwa parametry:
   //pierwszy parametr users — tablica obiektów użytkowników,
   //drugi parametr friendName — nazwa znajomych do wyszukania.
@@ -7,6 +8,7 @@ const getUsersWithFriend = (users, friendName) => {
   //Wskazówki:
   //Metoda filter() może być użyta do utworzenia nowej tablicy z elementami spełniającymi określony warunek.
   //Użyj metody includes(), aby sprawdzić czy tablica friends zawiera friendName.
+  return newUsers;
 };
 
 const allUsers = [
