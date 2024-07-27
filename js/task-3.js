@@ -1,9 +1,10 @@
 'use strict';
 
 const sortByDescendingFriendCount = users => {
-  //Funkcja powinna zwrócić tablicę wszystkich użytkowników posortowanych według liczby znajomych w porządku malejącym (właściwość friends).
-  //Wartość parametru users nie ulega zmianie;
-  //Do sortowania parametru users używana jest metoda toSorted();
+  const descentingFriendCount = users.toSorted(
+    (firstUser, secondUser) => secondUser.friends.length - firstUser.friends.length
+  );
+  return descentingFriendCount;
 };
 
 console.log(
